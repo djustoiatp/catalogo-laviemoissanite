@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>La Vie Joias · Moissanite</title>
+<meta name="description" content="Catálogo de joias em moissanite e prata 925 da La Vie Joias. Escolha suas peças e peça pelo WhatsApp.">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:title" content="La Vie Joias · Coleção Moissanite">
+<meta property="og:description" content="O brilho do diamante, em prata. Veja as peças e peça pelo WhatsApp.">
+<meta property="og:image" content="img/logo.png">
+<link rel="icon" href="img/monograma.png">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@400;500;600&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#FFFFFF; --soft:#FBF6F2; --panel:#FFFFFF; --well:#FFFFFF;
+  --ink:#4A3A32; --muted:#8A776C; --faint:#B09D92;
+  --line:#EFE3DB; --chip:#F7EEE8;
+  --rose:#B8876C; --rose-d:#9A6A50;
+  --btn:#B8876C; --btn-ink:#FFFFFF;
+  --wa:#1FA855; --wa-ink:#FFFFFF;
+  --grad:linear-gradient(135deg,#D4A88C,#B8876C 55%,#9A6A50);
+  --serif:"Bodoni Moda",Didot,"Times New Roman",serif;
+  --sans:"Jost","Avenir Next","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;padding-inline:16px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding-block:32px 140px}
+
+/* header */
+.logo{display:block;width:min(260px,64vw);max-width:100%;height:auto}
+.top{text-align:center;padding-block:8px 36px;display:flex;flex-direction:column;align-items:center;gap:18px}
+.brand{font:500 11px var(--sans);letter-spacing:.34em;text-transform:uppercase;color:var(--rose)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(36px,6vw,64px);line-height:1;letter-spacing:-.01em;margin:0;color:var(--ink);text-wrap:balance}
+h1 em{font-style:italic;color:var(--rose)}
+.intro{background:var(--soft);border-radius:18px;padding:36px clamp(20px,5vw,56px);display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);align-items:center}
+.intro img{width:92px;height:auto}
+.intro h2{font-family:var(--serif);font-weight:400;font-size:clamp(24px,3vw,30px);margin:0 0 10px;color:var(--ink)}
+.intro p{margin:0 0 10px;color:var(--muted);max-width:68ch}
+.intro p b{color:var(--ink);font-weight:500}
+.props{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.props li{font-size:13px;color:var(--rose-d);background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 12px}
+
+/* facts */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:0;border-bottom:1px solid var(--line)}
+.facts div{padding:18px 16px 18px 0}
+.facts div+div{padding-left:16px;border-left:1px solid var(--line)}
+.facts strong{display:block;font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.1;font-variant-numeric:tabular-nums}
+.facts span{font-size:12.5px;color:var(--muted)}
+
+/* filters */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:14px;margin-top:40px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px;align-items:center;border-bottom:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;flex:1 1 100%;min-width:0}
+@media (max-width:760px){
+  .intro{grid-template-columns:1fr;text-align:left}.intro img{width:64px}
+  .tgrid{grid-template-columns:1fr;gap:18px}.chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;font:500 13px var(--sans);letter-spacing:.02em;color:var(--ink);background:transparent;border:1px solid var(--line);padding:8px 14px;border-radius:99px;cursor:pointer}
+.chip small{color:var(--faint);font-weight:400;margin-left:4px}
+.chip[aria-pressed="true"]{background:var(--rose);color:#fff;border-color:var(--rose)}
+.chip[aria-pressed="true"] small{color:inherit;opacity:.6}
+.tools{display:flex;gap:8px;flex:1 1 100%;max-width:380px}
+.tools input,.tools select{font:400 14px var(--sans);color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 12px;min-width:0}
+.tools input{flex:1}
+
+/* grid */
+.sec{margin-top:48px}
+.sec h2{font-family:var(--serif);font-weight:400;font-style:italic;font-size:30px;color:var(--rose-d);margin:0 0 16px;display:flex;align-items:baseline;gap:12px}
+.sec h2 span{font:500 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--faint);font-style:normal}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:40px 24px}
+.card{display:flex;flex-direction:column;gap:10px}
+.ph{aspect-ratio:1;max-width:100%;background:var(--well);border-radius:10px;box-shadow:0 0 0 1px var(--line) inset;overflow:hidden;position:relative;cursor:zoom-in;border:0;padding:0}
+.ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.card:hover .ph img{transform:scale(1.04)}
+.cat{font:500 10.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
+.card h3{font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.2;margin:2px 0 0;text-wrap:balance}
+.spec{font-size:13px;color:var(--muted);margin:0}
+.cod{font:400 11.5px var(--sans);letter-spacing:.06em;color:var(--faint)}
+.cod b{font-weight:500;color:var(--muted);letter-spacing:.08em;user-select:all}
+.foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:6px}
+.price{font-family:var(--serif);font-size:22px;font-variant-numeric:tabular-nums lining-nums;white-space:nowrap}
+.price small{display:block;font:400 11.5px var(--sans);color:var(--faint)}
+.add{font:500 13px var(--sans);color:var(--btn-ink);background:var(--btn);border:1px solid var(--btn);border-radius:99px;padding:9px 14px;cursor:pointer;white-space:nowrap}
+.add.on{background:transparent;color:var(--rose-d);border-color:var(--rose)}
+.add:hover{background:var(--rose-d);border-color:var(--rose-d)}
+.empty{color:var(--muted);padding:40px 0}
+
+/* info */
+.trust{margin-top:72px;background:var(--soft);border-radius:18px;padding:40px clamp(20px,5vw,56px)}
+.trust h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3.4vw,34px);margin:0 0 24px;text-align:center}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.tgrid div{border-top:1px solid var(--rose);padding-top:14px}
+.tgrid h3{font:500 15px var(--sans);color:var(--ink);margin:0 0 6px}
+.tgrid p{margin:0;color:var(--muted);font-size:14px}
+.more{margin-top:56px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.more h2{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--rose-d);font-size:clamp(28px,4vw,38px);margin:0 0 10px;line-height:1.1}
+.more p{color:var(--muted);max-width:46ch;margin:0}
+.contact{margin-top:22px;display:flex;flex-direction:column;gap:10px;align-items:center}
+.num{font:500 15px var(--sans);user-select:all;font-variant-numeric:tabular-nums}
+.note{margin-top:28px !important;font-size:12px;color:var(--faint)}
+
+/* bag */
+.bag{position:fixed;left:0;right:0;bottom:0;z-index:10;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:var(--panel);border-top:1px solid var(--line);display:flex;justify-content:center;transform:translateY(110%);transition:transform .3s ease}
+.bag.on{transform:none}
+.bag-in{width:100%;max-width:1180px;display:flex;align-items:center;gap:14px;justify-content:space-between;flex-wrap:wrap}
+.bag-t{font-size:14px;color:var(--muted)}
+.bag-t b{color:var(--ink);font-family:var(--serif);font-size:20px;font-weight:500;font-variant-numeric:tabular-nums}
+.bag-a{display:flex;gap:8px}
+.clear{font:500 13px var(--sans);background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:10px 14px;cursor:pointer}
+.wa{display:inline-flex;align-items:center;gap:8px;font:600 14px var(--sans);color:var(--wa-ink);background:var(--wa);border-radius:99px;padding:11px 18px;text-decoration:none}
+.wa svg{width:18px;height:18px}
+
+/* lightbox */
+[hidden]{display:none!important}
+.lb{position:fixed;inset:0;z-index:20;background:rgba(10,10,14,.86);display:grid;place-items:center;padding:24px}
+.lb img{max-width:min(640px,100%);max-height:80vh;border-radius:6px;background:#fff}
+.lb p{color:#EDEDF0;font-family:var(--serif);font-size:20px;text-align:center;margin:14px 0 0}
+.lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:16px;background:none;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:99px;padding:6px 12px;font:500 13px var(--sans);cursor:pointer}
+
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--rose);outline-offset:2px}
+@media (max-width:760px){
+  .intro{grid-template-columns:1fr;text-align:left}.intro img{width:64px}
+  .tgrid{grid-template-columns:1fr;gap:18px}
+  .top{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div:nth-child(3){padding-left:0;border-left:0}
+  .facts div:nth-child(n+3){border-top:1px solid var(--line)}
+  .grid{grid-template-columns:1fr 1fr;gap:24px 12px}
+  .card h3{font-size:16.5px}.price{font-size:19px}
+  .foot{flex-direction:column;align-items:stretch}
+  .add{width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <img class="logo" src="img/logo.png" alt="La Vie Joias">
+    <div class="brand" style="margin-top:6px">Coleção Moissanite</div>
+    <h1>O brilho do diamante, <em>em prata</em></h1>
+  </header>
+
+  <section class="intro" aria-labelledby="oque">
+    <img src="img/monograma.png" alt="" aria-hidden="true">
+    <div>
+      <h2 id="oque">O que é moissanite?</h2>
+      <p>Uma pedra preciosa cultivada em laboratório, com <b>mais brilho que o diamante</b> e quase a mesma dureza. A aparência de um diamante por uma fração do preço.</p>
+      <ul class="props">
+        <li>Dureza 9,25</li><li>Não perde o brilho</li><li>Prata 925</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <div class="bar">
+    <div class="chips" id="chips" role="toolbar" aria-label="Categorias"></div>
+    <div class="tools">
+      <input id="q" type="search" placeholder="Buscar por nome ou código" aria-label="Buscar peça">
+    </div>
+  </div>
+
+  <div id="list"></div>
+
+  <section class="trust" aria-labelledby="garantia">
+    <h2 id="garantia">Autenticidade e garantia</h2>
+    <div class="tgrid">
+      <div><h3>Identificação em todas as peças</h3><p>Todas as nossas peças possuem identificação.</p></div>
+      <div><h3>Teste na caneta detectora</h3><p>Todas as peças passam pelo teste na caneta detectora antes de chegar até você.</p></div>
+      <div><h3>Garantia da prata</h3><p>A garantia cobre a prata. Perda de pedras não é coberta pela garantia.</p></div>
+    </div>
+  </section>
+
+  <section class="more">
+    <h2>Procurando outro modelo?</h2>
+    <p>Temos mais peças em moissanite na loja. Chame no WhatsApp e consulte outros modelos disponíveis.</p>
+    <div class="contact">
+      <a class="wa" id="waMain" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.2z"/></svg> Consultar outros modelos</a>
+      <span class="num" id="numTxt"></span>
+    </div>
+    <p class="note">Tamanhos, estoque e frete confirmados no atendimento. Valores sujeitos a alteração.</p>
+  </section>
+</main>
+
+<div class="bag" id="bag" aria-live="polite">
+  <div class="bag-in">
+    <div class="bag-t"><span id="bagN">0 peças</span> · <b id="bagV">R$ 0</b></div>
+    <div class="bag-a">
+      <button class="clear" id="clear" type="button">Limpar</button>
+      <a class="wa" id="send" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.2z"/></svg>Enviar pedido</a>
+    </div>
+  </div>
+</div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true">
+  <button type="button" id="lbX">Fechar</button>
+  <div><img id="lbImg" alt=""><p id="lbT"></p></div>
+</div>
+
+<script>
+/* ===== CONFIGURAÇÃO: troque o número do WhatsApp aqui ===== */
+var PHONE = "5581997112402";
+var PHONE_TXT = "(81) 99711-2402";
+/* ========================================================= */
+var P = [];
+var ALL_CATS = ["Solitários","Anéis","Alianças","Brincos & Piercings","Colares","Pulseiras","Pingentes"], ORDER = [];
+var state = {cat:"Todas", q:"", ord:"cat"}, bag = {};
+var brl = function(v){return v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});};
+var $ = function(id){return document.getElementById(id);};
+var norm = function(s){return s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();};
+var wa = function(msg){return "https://wa.me/"+PHONE+"?text="+encodeURIComponent(msg);};
+
+$("numTxt").textContent = PHONE_TXT;
+$("waMain").href = wa("Olá! Vi o catálogo de Moissanite da La Vie e quero consultar outros modelos disponíveis.");
+
+function chips(){
+  var cats = ["Todas"].concat(ORDER);
+  $("chips").innerHTML = cats.map(function(c){
+    var n = c==="Todas"?P.length:P.filter(function(p){return p.c===c;}).length;
+    return '<button class="chip" type="button" data-c="'+c+'" aria-pressed="'+(state.cat===c)+'">'+c+'<small>'+n+'</small></button>';
+  }).join("");
+}
+function card(p){
+  var on = !!bag[p.id];
+  return '<article class="card">'+
+    '<button class="ph" type="button" data-z="'+p.id+'" aria-label="Ampliar foto: '+p.n+'"><img loading="lazy" src="'+p.img+'" alt="'+p.n+'"></button>'+
+    '<div><div class="cod">Cód. <b>'+p.cod+'</b></div><h3>'+p.n+'</h3></div>'+
+    '<p class="spec">'+p.d+'</p>'+
+    '<div class="foot"><div class="price">'+brl(p.p)+'</div>'+
+    '<button class="add'+(on?" on":"")+'" type="button" data-a="'+p.id+'">'+(on?"Adicionada ✓":"Adicionar")+'</button></div>'+
+  '</article>';
+}
+function render(){
+  var q = norm(state.q.trim());
+  var list = P.filter(function(p){
+    return (state.cat==="Todas"||p.c===state.cat) && (!q || norm(p.n+" "+p.d+" "+p.c+" "+p.cod).indexOf(q)>-1);
+  });
+  var html = "";
+  if(!list.length){ html = '<p class="empty">Nenhuma peça encontrada para “'+state.q+'”. Tente outra palavra ou veja todas as categorias.</p>'; }
+  else if(state.ord==="cat"){
+    ORDER.forEach(function(c){
+      var g = list.filter(function(p){return p.c===c;});
+      if(g.length) html += '<section class="sec"><h2>'+c+'<span>'+g.length+(g.length>1?" peças":" peça")+'</span></h2><div class="grid">'+g.map(card).join("")+'</div></section>';
+    });
+  } else {
+    list = list.slice().sort(function(a,b){return state.ord==="asc"?a.p-b.p:b.p-a.p;});
+    html = '<section class="sec"><div class="grid">'+list.map(card).join("")+'</div></section>';
+  }
+  $("list").innerHTML = html;
+}
+function updBag(){
+  var ids = Object.keys(bag), tot = ids.reduce(function(s,i){return s+bag[i].p;},0);
+  $("bag").classList.toggle("on", ids.length>0);
+  $("bagN").textContent = ids.length+(ids.length===1?" peça":" peças");
+  $("bagV").textContent = brl(tot);
+  var msg = "Olá! Vi o catálogo de Moissanite da La Vie e quero estas peças:\n\n" +
+    ids.map(function(i){return "• "+bag[i].n+" | Cód. "+bag[i].cod+" – "+brl(bag[i].p);}).join("\n") +
+    "\n\nTotal: "+brl(tot)+"\nPode confirmar tamanho e disponibilidade?";
+  $("send").href = wa(msg);
+}
+document.addEventListener("click", function(e){
+  var t = e.target.closest("[data-c],[data-a],[data-z]");
+  if(!t) return;
+  if(t.dataset.c){ state.cat = t.dataset.c; chips(); render(); window.scrollTo({top:$("list").offsetTop-90,behavior:"smooth"}); }
+  else if(t.dataset.a){
+    var p = P.find(function(x){return String(x.id)===t.dataset.a;});
+    if(bag[p.id]) delete bag[p.id]; else bag[p.id]=p;
+    t.classList.toggle("on",!!bag[p.id]); t.textContent = bag[p.id]?"Adicionada ✓":"Adicionar"; updBag();
+  }
+  else if(t.dataset.z){
+    var z = P.find(function(x){return String(x.id)===t.dataset.z;});
+    $("lbImg").src = z.img; $("lbImg").alt = z.n; $("lbT").textContent = z.n+" · Cód. "+z.cod+" · "+brl(z.p); $("lb").hidden = false;
+  }
+});
+$("lb").addEventListener("click", function(e){ if(e.target.id!=="lbImg") $("lb").hidden = true; });
+document.addEventListener("keydown", function(e){ if(e.key==="Escape") $("lb").hidden = true; });
+$("q").addEventListener("input", function(e){ state.q = e.target.value; render(); });
+$("clear").addEventListener("click", function(){ bag = {}; updBag(); render(); });
+fetch("produtos.json?v="+Date.now()).then(function(r){return r.json();}).then(function(list){
+  P = list.map(function(x){return {id:x.codigo,cod:x.codigo,n:x.nome,d:x.descricao||"",c:x.categoria,p:Number(x.preco),img:"fotos/"+x.foto};});
+  ALL_CATS.forEach(function(c){ if(ORDER.indexOf(c)<0 && P.some(function(p){return p.c===c;})) ORDER.push(c); });
+  P.forEach(function(p){ if(ORDER.indexOf(p.c)<0) ORDER.push(p.c); });
+  P.sort(function(a,b){return ORDER.indexOf(a.c)-ORDER.indexOf(b.c) || a.p-b.p;});
+  chips(); render(); updBag();
+}).catch(function(){ $("list").innerHTML='<p class="empty">Não foi possível carregar os produtos. Atualize a página.</p>'; });
+</script>
+
+</body>
+</html>

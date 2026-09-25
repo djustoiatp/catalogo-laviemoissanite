@@ -1,0 +1,46 @@
+CATÁLOGO LA VIE JOIAS · COMO ATUALIZAR
+======================================
+
+Tudo é editado no site do GitHub (github.com), dentro do repositório do catálogo.
+Depois de salvar (Commit changes), o site atualiza sozinho em 1 a 2 minutos.
+
+ARQUIVOS
+- index.html ........ layout do catálogo. NÃO precisa mexer.
+- produtos.json ..... lista de peças (código, nome, descrição, categoria, preço, foto).
+- fotos/ ............ fotos das peças. O nome do arquivo é o código da peça (ex.: A1E67840001.jpg).
+- img/ .............. logo e monograma.
+
+MUDAR PREÇO, NOME OU DESCRIÇÃO
+1. Abra produtos.json e clique no lápis (Edit).
+2. Ache a peça pelo código (Ctrl+F) e altere o valor.
+   Preço vai SEM "R$" e com PONTO: 1197.00  (errado: 1.197,00)
+3. Clique em "Commit changes".
+
+TIRAR UMA PEÇA
+Apague o bloco inteiro da peça, de { até },  (inclusive a vírgula).
+Atenção: a última peça da lista NÃO pode ter vírgula depois do }.
+
+INCLUIR UMA PEÇA
+1. Suba a foto: pasta fotos > Add file > Upload files.
+   Foto quadrada, fundo branco, nome = código.jpg
+2. Em produtos.json, copie um bloco existente, cole abaixo e troque os dados:
+   {
+     "codigo": "XXX00000001",
+     "nome": "Nome da peça",
+     "descricao": "Detalhe · medida · quilate",
+     "categoria": "Anéis",
+     "preco": 597.00,
+     "foto": "XXX00000001.jpg"
+   },
+
+CATEGORIAS ACEITAS (escreva igual)
+Solitários · Anéis · Alianças · Brincos & Piercings · Colares · Pulseiras · Pingentes
+(Uma categoria nova também funciona: ela aparece no fim da lista.)
+
+TROCAR O WHATSAPP
+Em index.html, procure:  var PHONE = "5581997112402";
+Formato: 55 + DDD + número, só números.
+
+SE O CATÁLOGO APARECER VAZIO
+Quase sempre é vírgula ou aspas faltando no produtos.json.
+Cole o conteúdo em jsonlint.com para achar a linha com erro.
